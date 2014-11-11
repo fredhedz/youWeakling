@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *jokeLabel;
 @property BOOL adBannerIsVisible;
-//@property ADBannerView *adBannerView;
 @property (strong, nonatomic) IBOutlet ADBannerView *adBannerView;
 
 @end

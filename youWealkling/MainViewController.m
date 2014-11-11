@@ -85,32 +85,27 @@
     
     categoryIcon.image = self.categoryIcons[indexPath.row];
     categoryLabel.image = self.categoryLabels[indexPath.row];
-    //if the cell is selected then add a checkmark and a name label
+    
+    //if the cell is selected then add a checkmark
     //if useroptions returns 1 for the row, then the icon should be checked
     switch (indexPath.row) {
         case 0:
             checkmarkImage.image = self.userOptions.diet ? [UIImage imageNamed:@"checkmark.png"] : nil;
-//            categoryLabel.image = self.userOptions.diet ? self.categoryLabels[indexPath.row] : nil;
             break;
         case 1:
             checkmarkImage.image = self.userOptions.exercise ? [UIImage imageNamed:@"checkmark.png"] : nil;
-//            categoryLabel.image = self.userOptions.exercise ? self.categoryLabels[indexPath.row] : nil;
             break;
         case 2:
             checkmarkImage.image = self.userOptions.creativity ? [UIImage imageNamed:@"checkmark.png"] : nil;
-//            categoryLabel.image = self.userOptions.creativity ? self.categoryLabels[indexPath.row] : nil;
             break;
         case 3:
             checkmarkImage.image = self.userOptions.life ? [UIImage imageNamed:@"checkmark.png"] : nil;
-//            categoryLabel.image = self.userOptions.life ? self.categoryLabels[indexPath.row] : nil;
             break;
         case 4:
             checkmarkImage.image = self.userOptions.love ? [UIImage imageNamed:@"checkmark.png"] : nil;
-//            categoryLabel.image = self.userOptions.love ? self.categoryLabels[indexPath.row] : nil;
             break;
         case 5:
             checkmarkImage.image = self.userOptions.study ? [UIImage imageNamed:@"checkmark.png"] : nil;
-//            categoryLabel.image = self.userOptions.study ? self.categoryLabels[indexPath.row] : nil;
             break;
         default:
             break;
@@ -190,9 +185,6 @@
     
     //30minutes, 1-12hr, 24hr
     UIImageView *timeView = [[UIImageView alloc] initWithImage:self.timeIntervalImages[row]];
-//    UIImageView *timeView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 50)];
-//    timeView.text = timePickerTitles[row];
-//    [timeView setFont:[UIFont systemFontOfSize:25]];
     [timeView setFrame:CGRectMake(0, 0, 150, 25)];
     return timeView;
 }
@@ -283,8 +275,6 @@
 
 - (IBAction)startTutorialButtonClicked:(UIButton *)sender
 {
-//    CGFloat width = self.view.frame.size.width;
-
     self.exitButtonContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
     [self.exitButtonContainerView setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:self.exitButtonContainerView];
